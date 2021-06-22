@@ -40,8 +40,6 @@ The method return the observed difference in the dataset and the p-value for the
 `plot_results` will plot the sampling distribution of the difference between two groups, and the null distribution with a vertical line showing where the observed difference in the dataset lies on the null distribution.
 
 
-
-
 ## Multiple Hypothesis Tests
 
 ```python
@@ -49,11 +47,10 @@ tests = MultipleTests(df, group_feature, test_features, samples=1000)
 ```
 `group_feature` is the same as before, while `test_features` is a list of features to run tests on.
 
-with `diffs, p_values = tests.run_test()` instead of printing the results, you can get a dataframe that has a index of each test_feature and 4 columns which are:
+with `diffs, p_values = tests.run_test()` instead of printing the results, you can get a dataframe that has a index of each feature in `test_features` and 4 columns which are:
 * `positive_average`: The positive group average for a given feature
 * `negative_average`: The negative group average for a given feature
 * `difference`: The observed difference between the two groups for a given feature
 * `p_value`: The p-value of the test for a given feature
 
-using `tests.get_results_df()` after runnning the tests.
-
+using `results_df = tests.get_results_df()` after runnning the tests.
