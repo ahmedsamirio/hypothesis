@@ -54,3 +54,8 @@ with `diffs, p_values = tests.run_test()` instead of printing the results, you c
 * `p_value`: The p-value of the test for a given feature
 
 using `results_df = tests.get_results_df()` after runnning the tests.
+
+
+
+# Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
