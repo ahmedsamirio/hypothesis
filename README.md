@@ -46,7 +46,7 @@ The method return the observed difference in the dataset and the p-value for the
 
 ```python
 tests = MultipleTests(df, group_feature, test_features, samples=1000)
-
+```
 `group_feature` is the same as before, while `test_features` is a list of features to run tests on.
 
 with `diffs, p_values = tests.run_test()` instead of printing the results, you can get a dataframe that has a index of each test_feature and 4 columns which are:
