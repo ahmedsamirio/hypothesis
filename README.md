@@ -21,8 +21,10 @@ This project was done after writing several classes and functions to run multipl
 
 The package until now is designed to run a hypothesis test of difference in a feature average between two groups. So you need to have two groups that you want to figure out the presence of a statistical difference between.
 
+## Single Hypothesis Tests
+
 ```python
-test = HypothesisTest(df, group_feature, test_feature)
+test = HypothesisTest(df, group_feature, test_feature, samples=10000)
 ```
 
 `group_feature` is the feature that divides the dataframe into two groups, which should be a binary feature with 1 for positive group and 0 for negative group.  
@@ -30,8 +32,28 @@ test = HypothesisTest(df, group_feature, test_feature)
 
 Then you would run and visualize the test results using
 ```python
-test.run_test(print_results=True, plot_results=True)
+diff, p = test.run_test(print_results=True, plot_results=True)
 ```
+The method return the observed difference in the dataset and the p-value for the hypothesis test.
+
 `print_results` will print the observed difference in the dataset, and the p-value, and whether the null hypothesis (that there is a statistical difference betwee the two groups) was rejected or not.  
 `plot_results` will plot the sampling distribution of the difference between two groups, and the null distribution with a vertical line showing where the observed difference in the dataset lies on the null distribution.
+
+
+
+
+## Multiple Hypothesis Tests
+
+```python
+tests = MultipleTests(df, group_feature, test_features, samples=1000)
+
+`group_feature` is the same as before, while `test_features` is a list of features to run tests on.
+
+with `diffs, p_values = tests.run_test()` instead of printing the results, you can get a dataframe that has a index of each test_feature and 4 columns which are:
+* `positive_average`: The positive group average for a given feature
+* `negative_average`: The negative group average for a given feature
+* `difference`: The observed difference between the two groups for a given feature
+* `p_value`: The p-value of the test for a given feature
+
+using `tests.get_results_df()` after runnning the tests.
 
