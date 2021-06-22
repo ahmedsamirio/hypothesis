@@ -72,6 +72,8 @@ class HypothesisTest:
         self.p = self.calculate_p_val(self.null_vals, self.obs_diff)
         if print_results or plot_results:
             self.final_results()
+            
+        return self.obs_diff, self.p
     
     def plot_sampling_dist(self):
         """Function to plot the sampling distribution of the statistic after bootstraping"""

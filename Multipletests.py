@@ -55,6 +55,7 @@ class MultipleTests(HypothesisTest):
                                                        self.samples) for feature in self.test_features}
         self.p_values = {feature: self.calculate_p_val(self.null_vals[feature],
                                                        self.obs_diff[feature]) for feature in self.test_features}
+        return self.observed_differences, self.p_values
 
             
     def get_groups_averages(self):
