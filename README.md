@@ -25,6 +25,5 @@ The package until now is designed to run a hypothesis test of difference in a fe
 test = HypothesisTest(df, group_feature, test_feature)
 ```
 
-`group_feature` if the feature that divided the dataframe into two groups, which should be a binary feature with 1 for positive group and 0 for negative group.
-
+`group_feature` if the feature that divided the dataframe into two groups, which should be a binary feature with 1 for positive group and 0 for negative group. 
 `test_feature` is the feature whose average difference will be tested for significance using bootstraped samples from the dataframe.
