@@ -32,6 +32,6 @@ Then you would run and visualize the test results using
 ```python
 test.run_test(print_results=True, plot_results=True)
 ```
-`print_results` will print the observed difference in the dataset, and the p-value, and whether the null hypothesis (that there is a statistical difference betwee the two groups) was rejected or not.
+`print_results` will print the observed difference in the dataset, and the p-value, and whether the null hypothesis (that there is a statistical difference betwee the two groups) was rejected or not.  
 `plot_results` will plot the sampling distribution of the difference between two groups, and the null distribution with a vertical line showing where the observed difference in the dataset lies on the null distribution.
 
