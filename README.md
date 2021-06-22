@@ -21,4 +21,9 @@ This project was done after writing several classes and functions to run multipl
 
 The package until now is designed to run a hypothesis test of difference in a feature average between two groups. So you need to have two groups that you want to figure out the presence of a statistical difference between.
 
-``` test = HypothesisTest(df, group_feature, test_feature) ```
+```python
+test = HypothesisTest(df, group_feature, test_feature)
+```
+
+`group_feature` if the feature that divided the dataframe into two groups, which should be a binary feature with 1 for positive group and 0 for negative group.
+`test_feature` is the feature whose average difference will be tested for significance using bootstraped samples from the dataframe.
