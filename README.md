@@ -17,8 +17,8 @@ hypothesis-test requires:
 This project was done after writing several classes and functions to run multiple hypothesis tests on a pandas dataframe for an analysis, which later inspired me to package them and use them easily at anytime, and share them as they might be useful to other people as well.
 
 
-# How to use
+# Usage
 
-The package until now is designed to run a hypothesis test of difference in a certain feature average between two groups. So you need to have two groups that you want to figure out the presence of a statistical difference between.
+The package until now is designed to run a hypothesis test of difference in a feature average between two groups. So you need to have two groups that you want to figure out the presence of a statistical difference between.
 
-> test = HypothesisTest(df, group_feature, test_feature)
+``` test = HypothesisTest(df, group_feature, test_feature) ```
