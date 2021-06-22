@@ -1,6 +1,6 @@
-# hypothesis-test
+# pandas-hypothesis
 
-hypothesis-test is a python package for running hypothesis tests directly on pandas dataframes.
+pandas-hypothesis is a python package for running hypothesis tests directly on pandas dataframes.
 
 # Installation 
 
